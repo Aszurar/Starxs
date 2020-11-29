@@ -1,0 +1,102 @@
+body{
+    color: var(--color-white);
+    background-color: var(--color-dark-light);
+}
+
+.table-cart{
+    background-color: var(--color-coral);
+    max-width: 70rem;
+  
+    margin: 1.875rem auto;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0rem 0.159rem 1.3rem -0.125rem var(--color-orange);
+
+    opacity: 0;
+
+    animation: bottom;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+    display: block;
+  
+}
+
+@keyframes bottom {
+    from {
+      transform: translateY(-5.625rem);
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.table-cart table{
+    border-spacing: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.table-cart thead tr th, tbody tr td{
+    text-align: center;
+}
+
+td,
+th{
+    padding: 1rem;
+    border-bottom: 0.126rem solid var(--color-black);
+}
+
+th{
+    /* text-transform: uppercase; */
+    font-size: 1.15rem;
+    text-shadow: 0.5rem 0.2rem 0.5rem var(--color-black);
+}
+
+tbody tr td:first-child{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+tbody tr td:nth-child(5){
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+button[type="submit"] {
+    padding: 0.5rem;
+    border: 0.126rem solid var(--color-black);
+    border-radius: 0.5rem;
+    background-color: var(--color-orange);
+    color: var(--color-black);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover{
+    transition: 1s;
+    background-color: var(--color-black);
+    color: var(--color-orange);
+}
+
+tbody tr td span{
+    width: 7rem;
+    height: 7rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    box-shadow: 0.188rem 0.063rem 0.4rem -0.1rem var(--color-black);
+    border: 0.125rem solid var(--color-black);
+}
+

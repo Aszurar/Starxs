@@ -1,0 +1,49 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Cart</title>
+    <link rel="stylesheet" href="/visuals/cart.css">
+{% endblock %}
+
+{% block content %}
+    <div class="table-cart">
+        <table>
+            <thead>
+                <tr>
+                    <th>Products</th>
+                    <th>Quantity</th>
+                    <th>Total Weight(g)</th>
+                    <th>Price(1 unit)</th>
+                    <th>Total Price($)</th>
+                    <th></th>
+                </tr>            
+            </thead>
+
+            <tbody>
+                {% for product in productsCart %}
+                    <tr>
+                        <td class="name"><span style="background-image: url({{product.avatar}})"></span>
+                        {{product.title}}</td>
+                        <td class="quantity">{{product.quantity}}</td>
+                        <td>{{product.totalWeight}}</td>
+                        <td>{{product.price}}</td>
+                        <td class = "total-price">{{product.totalPrice}}</td>
+                        
+                        <td>
+                            <form id="form-delete" action="/cart?_method=DELETE" method="post">
+                                <input type="hidden" name="id" value={{product.id}}>
+                                <button type="submit">Remove</button>
+                            </form>
+                        </td>
+                        
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <div class="price">
+            <h2>Final Price: ${{price.finalPrice}}</h2>
+        </div>
+    </div>
+    <script src="/scripts/confirm.js"></script>
+{% endblock %}

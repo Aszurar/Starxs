@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Products</title>
+    <link rel="stylesheet" href="/visuals/products.css">
+{% endblock %}
+
+{% block content %}
+    <div class="card-main">
+        
+        <h2>{{textProducts.title}}</h2>
+        
+        <div class="items-grid">
+            {% for product in products %}                
+                <li id="{{product.name}}">
+                   
+                    <section style="background: url({{product.avatar}})
+                    no-repeat center center / cover" alt="">
+                    </section>
+                    
+                    <div class="details">
+                        <h3>{{product.title}}</h3>
+                        <div class="stars">
+                            {% for star in product.rating %}
+                                {{star}}
+                            {% endfor %}
+                        </div>
+                        <p class="price">${{product.price}}</p>
+                    </div>
+                    
+                    <form action="/products" method="POST">
+                        <div class="info">
+                            <select name="quantity">                            
+                                <option value="1">Qty: 1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+    
+                        <div class="button-cart">
+                            <input type="hidden" 
+                                name="id" 
+                                value="{{product.id}}">
+                            <button type="submit">{{textProducts.button}}</button>
+                        </div>
+                    </form>
+                </li>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
