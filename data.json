@@ -78,6 +78,22 @@
         "<img src='/assets/star_empty.svg' alt='empty star icon'>"
       ],
       "totalWeight": 1200
+    },
+    {
+      "id": "1",
+      "avatar": "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=675&q=80",
+      "title": "Leather Jacket",
+      "quantity": "4",
+      "price": "1000",
+      "totalPrice": 4000,
+      "rating": [
+        "<img src='/assets/star.svg' alt='star icon'>",
+        "<img src='/assets/star.svg' alt='star icon'>",
+        "<img src='/assets/star.svg' alt='star icon'>",
+        "<img src='/assets/star.svg' alt='star icon'>",
+        "<img src='/assets/star_empty.svg' alt='empty star icon'>"
+      ],
+      "totalWeight": 8000
     }
   ]
 }
