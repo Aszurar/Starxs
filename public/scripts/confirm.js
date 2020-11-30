@@ -12,13 +12,10 @@ formDelete.forEach(deleteForm => {
     
 })
 
-// PRICE
-// const pricesForm = document.querySelectorAll('total-price')
-// const totalPrice = 0
-// console.log(pricesForm);
-// 
-// pricesForm.forEach(price => {
-    // console.log(price);
-    // totalPrice = price.innerHTML
-    // console.log(totalPrice);
-// })
+
+const formBuy = document.querySelector('#form-buy')
+
+formBuy.addEventListener('submit', function(event){
+    alert("Purchase completed successfully!")
+})
+    

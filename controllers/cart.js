@@ -25,15 +25,21 @@ module.exports = {
 
         if (countJackets > 2) {
             finalPrice = totalPrice - (totalPrice*0.1)
+            discount = totalPrice*0.1
+            discountMessage = "CYBERMONDAY!!: +2 jackets, get 10% discount!" 
         }else{
             finalPrice = totalPrice
+            discountMessage = ""
+            discount = 0
         }
 
         console.log(finalPrice);
 
         const price = { 
+            totalPrice,
             finalPrice,
-            discount: "CYBERMONDAY!!: +2 jackets, get 10% discount!"    
+            discount,
+            discountMessage   
         }
 
         return res.render("cart/index", { productsCart: data.cart, price})
@@ -42,11 +48,16 @@ module.exports = {
     remove(req, res){
         const { id } = req.body
 
-        const filteredCartProducts = data.cart.filter(function(productCart){
-            return productCart.id != id
-        })
+        if (Number(id) == 0){
+            data.cart = []
+        } else {
 
-        data.cart = filteredCartProducts
+            const filteredCartProducts = data.cart.filter(function(productCart){
+                return productCart.id != id
+            })
+    
+            data.cart = filteredCartProducts
+        }
 
         fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
             if (err) throw `File Removal erro: ${err} `
