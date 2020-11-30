@@ -1,4 +1,4 @@
-# Controle Escolar | LaunchBase
+# STARXS | 
  O projeto de Controle Escolar é uma plataforma simples de um markplace, em que há 3 produtos distintos e o usuário poderá adicionar ao carrinho esses produtos promovendo um desconto caso escolha determinado produto e realizar o submit do pedido
 <h2 align="center">Starxs</h2>
 
