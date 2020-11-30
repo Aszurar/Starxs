@@ -58,7 +58,7 @@ ___
    "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5010 --files 'public,views'"
+    "browsersync": "browser-sync start --proxy http://localhost:5022 --files 'public,views'"
   },
 ```
  - Execução:
