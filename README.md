@@ -45,6 +45,10 @@ ___
 ```bash
   $ npm install nunjucks
 ```
+- Instalar o Method-Override
+  ```bash
+  $ npm install method-override
+  ```
  - Instalar o  Browser-sync e npm-run-all:
 ```bash
   $ npm install browser-sync npm-run-all -D
